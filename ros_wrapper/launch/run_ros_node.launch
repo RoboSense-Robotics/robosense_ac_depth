@@ -1,0 +1,47 @@
+<launch>
+  <arg name="config_file" default="$(find robosense_ac_depth)/lib_depth_inference/config/config.yaml"/>
+  <arg name="calib_file" default=""/>
+
+  <!-- camera topics -->
+  <arg name="left_image_topic" default="/rs_camera/left/color/image_raw"/>
+  <arg name="right_image_topic" default="/rs_camera/right/color/image_raw"/>
+  <arg name="crop_img" default="[0, 0, 0, 0]"/>
+  <arg name="use_compressed_image" default="false"/>
+
+  <!-- output topics -->
+  <arg name="disparity_topic" default="/stereo/disparity"/>
+  <arg name="rectified_left_topic" default="/stereo/left/rectified"/>
+  <arg name="rectified_right_topic" default="/stereo/right/rectified"/>
+  <arg name="pointcloud_topic" default="/stereo/dense/pointcloud"/>
+
+  <arg name="publish_rectified" default="true"/>
+  <arg name="save_results" default="false"/>
+  <arg name="save_results_path" default="" />
+
+  <!-- message queue and time synchronization -->
+  <arg name="queue_size" default="10"/>
+  <arg name="time_sync_threshold" default="0.01"/>
+
+  <!-- start node -->
+  <node name="ros_node" pkg="robosense_ac_depth" type="ros_node" output="screen">
+    <param name="config_file" value="$(arg config_file)"/>    
+    <param name="calib_file" value="$(arg calib_file)"/>    
+    
+    <param name="left_image_topic" value="$(arg left_image_topic)"/>
+    <param name="right_image_topic" value="$(arg right_image_topic)"/>
+    <param name="use_compressed_image" value="$(arg use_compressed_image)"/>
+
+    <param name="disparity_topic" value="$(arg disparity_topic)"/>
+    <param name="rectified_left_topic" value="$(arg rectified_left_topic)"/>
+    <param name="rectified_right_topic" value="$(arg rectified_right_topic)"/>
+    
+    <param name="publish_rectified" value="$(arg publish_rectified)"/>
+    
+    <param name="queue_size" value="$(arg queue_size)"/>
+    <param name="time_sync_threshold" value="$(arg time_sync_threshold)"/>
+    <param name="crop_img" value="$(arg crop_img)" type="yaml"/>
+    <param name="save_results" value="$(arg save_results)"/>
+    <param name="save_results_path" value="$(arg save_results_path)"/>
+  </node> 
+  
+</launch>

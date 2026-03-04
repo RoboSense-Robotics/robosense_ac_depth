@@ -1,0 +1,6 @@
+inference/build/*
+inference/demo/build/*
+inference/data
+catkin_ws
+lib_depth_inference
+models

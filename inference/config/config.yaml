@@ -1,0 +1,9 @@
+  version: "vL.1.0"
+  debug_flag: 1
+  model:
+    name: "tensorrt"
+    type: "stereo"
+    file: "/workspace/models/stereo_model_vL.1.0.plan"
+    image_scale: 0.5
+    mem_size: 8
+
