@@ -142,7 +142,7 @@ mkdir catkin_ws
 cd catkin_ws
 mkdir src && cd src
 ln -s ../../robosense_msgs ./
-ln -s ../../roswrapper ./
+ln -s ../../ros_wrapper ./
 cd ..
 catkin_make
 source devel/setup.bash
@@ -170,7 +170,7 @@ mkdir colcon_ws
 cd colcon_ws
 mkdir src && cd src
 ln -s ../../robosense_msgs ./
-ln -s ../../roswrapper ./
+ln -s ../../ros_wrapper ./
 cd ..
 colcon build
 source install/setup.bash

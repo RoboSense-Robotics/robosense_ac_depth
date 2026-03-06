@@ -1,4 +1,4 @@
-                                 Apache License
+                                Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
@@ -186,7 +186,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright [yyyy] [name of copyright owner]
+   Copyright 2026 RoboSense Technology Co., Ltd
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -199,3 +199,21 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+--------------------------------------------------------------------------------
+THIRD-PARTY COMPONENT LICENSE NOTICE
+
+The Source form of this Work (the code) is licensed under the Apache License, 
+Version 2.0. 
+
+However, this Work is designed to be used with certain machine learning 
+models provided by NVIDIA Corporation. These models are NOT included in this 
+repository but may be obtained separately via third-party download links.
+
+Use, reproduction, and distribution of the NVIDIA models are governed by the 
+"NVIDIA Open Model License Agreement". By downloading or using those models, 
+you agree to be bound by the terms of that license.
+
+Licensed by NVIDIA Corporation under the NVIDIA Open Model License.
+
+--------------------------------------------------------------------------------
